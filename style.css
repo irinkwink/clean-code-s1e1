@@ -5,6 +5,13 @@ body {
     font-family: Lato, sans-serif;
 }
 
+.visually-hidden {
+    visibility: hidden;
+    scale: 0;
+    opacity: 0;
+    position: absolute;
+}
+
 .hero {
     width: 500px;
     margin: 0 auto;

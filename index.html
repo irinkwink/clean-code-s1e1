@@ -10,7 +10,10 @@
   <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
 </head>
 <body class="todo">
-  <div class="todo__hero hero">
+  <h1 class="todo__title visually-hidden">Todo app</h1>
+
+  <section class="todo__hero hero">
+    <h2 class="todo__title visually-hidden">The Eisenhower matrix</h2>
     <img
       class="hero__img"
       src="./eisenhower-matrix.jpg"
@@ -22,53 +25,60 @@
     >
       Want more details?
     </a>
-  </div>
+  </section>
 
   <div class="todo__wrapper">
-    <p class="todo__add" id="topSectionForAddingElementToList">
+    <section class="todo__add-task" id="topSectionForAddingElementToList">
+      <h2 class="todo__title visually-hidden">Add Task</h2>
+
       <label class="todo__title" for="new-task">Add Item</label>
       <div class="todo__row task">
         <input class="task__input" id="new-task" type="text">
         <button class="task__btn btn btn_add">Add</button>
       </div>
-    </p>
+    </section>
 
-    <h3 class="todo__title">Todo</h3>
+    <section class="todo__incomplete-tasks">
+      <h2 class="todo__title">Todo</h2>
 
-    <ul class="todo__list" id="incompleteTasks">
-      <li class="todo__item task">
-        <input class="task__checkbox" type="checkbox">
-        <label class="task__label">Pay Bills</label>
-        <input class="task__checkbox" type="text">
-        <button class="task__btn btn btn_edit">Edit</button>
-        <button class="task__btn btn delete">
-          <img class="btn__img" src="./remove.svg" alt="delete button sign">
-        </button>
-      </li>
-      <li class="todo__item task task_edit">
-        <input class="task__checkbox" type="checkbox">
-        <label class="task__label">Go Shopping</label>
-        <input class="task__input" type="text" value="Go Shopping">
-        <button class="task__btn btn btn_edit">Save</button>
-        <button class="task__btn btn btn_delete">
-          <img class="btn__img" src="./remove.svg" alt="delete button sign">
-        </button>
-      </li>
-    </ul>
+      <ul class="todo__list" id="incompleteTasks">
+        <li class="todo__item task">
+          <input class="task__checkbox" type="checkbox">
+          <label class="task__label">Pay Bills</label>
+          <input class="task__checkbox" type="text">
+          <button class="task__btn btn btn_edit">Edit</button>
+          <button class="task__btn btn delete">
+            <img class="btn__img" src="./remove.svg" alt="delete button sign">
+          </button>
+        </li>
+        <li class="todo__item task task_edit">
+          <input class="task__checkbox" type="checkbox">
+          <label class="task__label">Go Shopping</label>
+          <input class="task__input" type="text" value="Go Shopping">
+          <button class="task__btn btn btn_edit">Save</button>
+          <button class="task__btn btn btn_delete">
+            <img class="btn__img" src="./remove.svg" alt="delete button sign">
+          </button>
+        </li>
+      </ul>
+    </section>
 
-    <h3 class="todo__title">Completed</h3>
+    <section class="todo__completed-tasks">
+      <h2 class="todo__title">Completed</h2>
 
-    <ul class="todo__list" id="completed-tasks">
-      <li class="todo__item task">
-        <input class="task__checkbox" type="checkbox" checked>
-        <label class="task__label task__label_done">See the Doctor</label>
-        <input class="task__input" type="text">
-        <button class="task__btn btn btn_edit">Edit</button>
-        <button class="task__btn btn btn_delete">
-          <img class="btn__img" src="./remove.svg" alt="delete button sign">
-        </button>
-      </li>
-    </ul>
+      <ul class="todo__list" id="completed-tasks">
+        <li class="todo__item task">
+          <input class="task__checkbox" type="checkbox" checked>
+          <label class="task__label task__label_done">See the Doctor</label>
+          <input class="task__input" type="text">
+          <button class="task__btn btn btn_edit">Edit</button>
+          <button class="task__btn btn btn_delete">
+            <img class="btn__img" src="./remove.svg" alt="delete button sign">
+          </button>
+        </li>
+      </ul>
+    </section>
+
   </div>
 
   <script src="app.js"></script>
